@@ -238,6 +238,18 @@
 	}
 }
 @media (max-width: 768px) {
+	.header {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.navigation {
+		margin-right: 0px;
+	}
+	.phone-number {
+		margin-left: 0;
+		align-self: center;
+	}
 	.phone-number .phone {
 		top: 5px;
 		left: 50px;

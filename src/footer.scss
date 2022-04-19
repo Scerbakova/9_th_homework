@@ -58,6 +58,9 @@ justify-content: center;
 		flex-direction: column;
 		align-items: center;
 	}
+	.input {
+		max-width: 375px;
+	}
 }
 .input__text {
 	font-weight: 600;
@@ -78,6 +81,7 @@ justify-content: center;
 	text-align: center;
 	letter-spacing: 0.04em;
 	color: #a7283e;
+	@include adaptive-font(22, 12);
 }
 .rights {
 	padding-bottom: 40px;
