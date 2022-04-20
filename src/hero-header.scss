@@ -43,18 +43,12 @@
 	color: #252641;
 	@include adaptive-font(22, 16);
 }
-@media (max-width: 1630px) {
-	.navigation {
-		flex-direction: column;
-		gap: 10px;
-	}
+.navigation a:hover {
+	text-decoration: underline;
 }
-@media (max-width: 768px) {
-	.navigation {
-		flex-direction: column;
-		gap: 10px;
-		margin-top: 50px;
-	}
+.navigation a:active {
+	border-radius: 20%;
+	box-shadow: 0px 10px 20px #b25a59;
 }
 .phone-number {
 	background: #b25a59;
@@ -169,4 +163,20 @@
 .watch__text {
 	margin-left: 36px;
 	color: #252641;
+}
+@media (max-width: 1630px) {
+	.navigation {
+		flex-direction: column;
+		gap: 10px;
+	}
+}
+@media (max-width: 768px) {
+	.navigation {
+		flex-direction: column;
+		gap: 10px;
+		margin-top: 50px;
+	}
+	.hero__main {
+		margin-top: 20px;
+	}
 }

@@ -96,3 +96,8 @@ justify-content: center;
 .subscribe[disabled]:active {
 	background: linear-gradient(105.5deg, #47474d 19.57%, #423a3a 78.85%);
 }
+@media (max-width: 767px) {
+	.footer {
+		margin-top: -150px;
+	}
+}

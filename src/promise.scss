@@ -51,12 +51,13 @@
 .card__title {
 	margin-top: 122px;
 	font-weight: 500;
-	font-size: 30px;
 	line-height: 45px;
 	margin-bottom: 19px;
+	@include adaptive-font (30, 22)
 }
 .card__text {
 	margin: 50px 55px;
+	@include adaptive-font (24, 18)
 }
 .booking {
 	display: flex;
@@ -134,6 +135,12 @@
 	box-sizing: border-box;
 	background-color: inherit;
 }
+.button-arrow:hover {
+	box-shadow: 0px 10px 5px #af6c2c;
+}
+.button-arrow:active {
+	background-color:#f0c53e
+}
 .review__picture {
 	border-radius: 20px;
 }
@@ -169,4 +176,15 @@
 	line-height: 27px;
 	padding: 12px 47px;
 	margin-bottom: 99px;
+}
+.book__button:hover {
+	box-shadow: 0px 10px 10px inset #f0c53e;
+}
+.book__button:active {
+	box-shadow: 0px 20px 20px #f0c53e;
+}
+@media (max-width: 767px) {
+	.promise__card-wrapper {
+		margin-bottom: 60px;
+	}
 }

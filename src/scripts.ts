@@ -1,3 +1,4 @@
+const container = document.querySelector<HTMLDivElement>(".container")
 const navMenu = document.querySelector<HTMLElement>(".navigation")
 const watch = document.querySelector<HTMLButtonElement>(".watch")
 const slider = document.querySelector<HTMLDivElement>(".slider")
@@ -24,7 +25,7 @@ watch.addEventListener('click', () => {
 	const toast = document.createElement("div");
 	toast.innerHTML = "This is a toast for info";
 	toast.classList.add("toast");
-	navMenu.appendChild(toast);
+	container.appendChild(toast);
 	setTimeout(() => { toast.className = toast.className.replace("toast", "hidden"); }, 5000);
 });
 
