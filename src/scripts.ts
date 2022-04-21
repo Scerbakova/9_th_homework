@@ -2,6 +2,7 @@ const container = document.querySelector<HTMLDivElement>(".container")
 const navMenu = document.querySelector<HTMLElement>(".navigation")
 const watch = document.querySelector<HTMLButtonElement>(".watch")
 const slider = document.querySelector<HTMLDivElement>(".slider")
+const image = document.querySelector<HTMLImageElement>(".destination")
 const buttonLeft = document.querySelector<HTMLButtonElement>(".left")
 const buttonRight = document.querySelector<HTMLButtonElement>(".right")
 const input = document.querySelector<HTMLInputElement>("input")
@@ -26,25 +27,24 @@ watch.addEventListener('click', () => {
 	toast.classList.add("toast");
 	container.appendChild(toast);
 	watch.disabled = true;
-	setTimeout(() => { toast.className = toast.className.replace("toast", "hidden"), watch.disabled = false;}, 5000);
+	setTimeout(() => { toast.className = toast.className.replace("toast", "hidden"), watch.disabled = false; }, 5000);
 });
 
 let offset = 0;
 buttonLeft.addEventListener("click", () => {
-	offset -= 490;
+	offset -= 590;
 	if (offset < 0) {
-		offset = (490 * 2);
+		offset = (590 * 2);
 	}
 	slider.style.left = -offset + "px";
-})
+});
 buttonRight.addEventListener("click", () => {
-	offset += 490;
-	if (offset > (490 * 2)) {
+	offset += 590;
+	if (offset > (590 * 2)) {
 		offset = 0;
 	}
 	slider.style.left = -offset + "px";
-})
-
+});
 
 let i = 0
 const possibleColors = ["#7c5b61", "#63745c", "#839462", "#8180b4", "#b25a59"];
