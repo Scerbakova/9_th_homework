@@ -21,12 +21,12 @@ navigation.forEach((item) => {
 })
 
 watch.addEventListener('click', () => {
-
 	const toast = document.createElement("div");
 	toast.innerHTML = "This is a toast for info";
 	toast.classList.add("toast");
 	container.appendChild(toast);
-	setTimeout(() => { toast.className = toast.className.replace("toast", "hidden"); }, 5000);
+	watch.disabled = true;
+	setTimeout(() => { toast.className = toast.className.replace("toast", "hidden"), watch.disabled = false;}, 5000);
 });
 
 let offset = 0;
