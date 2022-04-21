@@ -5,7 +5,7 @@ const slider = document.querySelector<HTMLDivElement>(".slider")
 const image = document.querySelector<HTMLImageElement>(".destination")
 const buttonLeft = document.querySelector<HTMLButtonElement>(".left")
 const buttonRight = document.querySelector<HTMLButtonElement>(".right")
-const input = document.querySelector<HTMLInputElement>("input")
+const input = document.querySelector<HTMLInputElement>(".input")
 const footer = document.querySelector<HTMLElement>(".footer");
 const buttonSubscribe = document.querySelector<HTMLButtonElement>(".subscribe")
 const list = document.querySelector<HTMLUListElement>(".list")
@@ -59,6 +59,7 @@ form.addEventListener("submit", (ev: Event) => {
 	ev.preventDefault();
 });
 
+
 const inputAlert = () => {
 	const error = document.createElement("div")
 	error.innerText = "Wrong email format"
@@ -86,13 +87,14 @@ buttonSubscribe.addEventListener("click", () => {
 			}
 		});
 	};
+	
 	if (input.value.match(regx)) {
 		makeEntry();
 	} else if (input.value.length < 3 || input.value.length > 20) {
 		inputAlert();
 	} else {
 		inputAlert();
-	}
+	}; 
 }); input.focus();
 
 const inputPlaceholder = input.placeholder
